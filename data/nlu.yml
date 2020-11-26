@@ -90,3 +90,81 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+
+- intent: covid
+  examples: |
+    - what is covid
+    - what is covid19
+    - covid19
+    - tell me about covid19
+    - about covid19
+    - about covid
+    - explain covid19
+
+- intent: corona_intro
+  examples: |
+    - can u tell me about corona
+    - i want to know about corona
+    - what is corona
+    - what is corona virus
+    - explain about corona
+    - information about corona
+    - information about corona virus
+
+- intent: corona_symptoms
+  examples: |
+    - can u tell me about corona symptoms
+    - i want to know about corona symptoms
+    - what are corona symptoms
+    - what are corona virus symptoms
+    - explain about corona symptoms
+    - information about corona symptoms
+    - information about corona virus symptoms
+    - corona symptoms
+    - corona virus symptoms
+
+- intent: name
+  examples: |
+    - my name is [saurav](NAME)
+    - myself [saurav](NAME)
+    - my name is [arya](NAME)
+    - myself [arya](NAME)
+    - my name is [rayyan](NAME)
+    - myself [rayyan](NAME)
+    - my name is [smit](NAME)
+    - myself [smit](NAME)
+
+- intent: state
+  examples: |
+    - im living in [maharashtra](user_state) and my district is [mumbai](user_district)
+    - im living in [gujarat](user_state) and my district is [ahmedabad](user_district)
+    - i live in [maharashtra](user_state)
+    - my district is [maharashtra](user_district)
+
+- intent: number_of_corona_cases
+  examples: |
+    - number of cases in [maharashtra](user_state)
+    - number of cases in [gujarat](user_state)
+    - stats of cases in [maharashtra](user_state)
+    - stats of cases in [gujarat](user_state)
+    - total cases in [maharashtra](user_state)
+
+- intent: get_location_cases
+  examples: |
+    - number of cases in my location
+    - stats of cases in my location
+    - total cases in my location
+
+- intent: no_idea
+  examples: |
+    - i dont know
+    - i am new to this
+    - i dont know the isocode
+
+- intent: email
+  examples: |
+    - my email is sauravjoshi2362000@gmail.com
+
+- intent: number
+  examples: |
+    - my number is 11111111

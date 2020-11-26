@@ -9,6 +9,42 @@ intents:
 - mood_great
 - mood_unhappy
 - bot_challenge
+- covid
+- corona_intro
+- corona_symptoms
+- name
+- state
+- number_of_corona_cases
+- get_location_cases
+- no_idea
+- email
+- number
+
+entities:
+- NAME
+- user_state
+- user_district
+- iso_state
+- email_id
+- mob_no
+
+
+slots:
+  NAME:
+    type: text
+  email_id:
+    type: text
+  iso_state:
+    type: text
+  mob_no:
+    type: text
+  user_district:
+    type: text
+  user_state:
+    type: text
+
+
+
 responses:
   utter_greet:
   - text: Hey! How are you?
@@ -23,3 +59,50 @@ responses:
   - text: Bye
   utter_iamabot:
   - text: I am a bot, powered by Rasa.
+  utter_covid:
+    - text: COVID-19 is the infectious disease caused by the most recently discovered coronavirus. This new virus and disease were unknown before the outbreak began in Wuhan, China, in December 2019.
+  utter_corona_intro:
+    - text: Corona viruses are a large family of viruses which may cause illness in animals or humans. In humans, several coronaviruses are known to cause respiratory infections ranging from the common cold to more severe diseases such as Middle East Respiratory Syndrome (MERS) and Severe Acute Respiratory Syndrome (SARS). The most recently discovered coronavirus causes coronavirus disease COVID-19.
+  utter_corona_symptoms:
+    - text: The most common symptoms of COVID-19 are fever, tiredness, and dry cough. Some patients may have aches and pains, nasal congestion, runny nose, sore throat or diarrhea. These symptoms are usually mild and begin gradually.Some people become infected but don’t develop any symptoms and dont feel unwell.Most people (about 80%) recover from the disease without needing special treatment.Around 1 out of every 6 people who gets COVID-19 becomes seriously ill and develops difficulty breathing.
+  utter_name:
+    - text: Hi!! May I know your name?
+  utter_your_name:
+    - text: Hi {NAME} Do you want more about Corona Virus in Your Place!!example:--im living in statename and my district is !
+  utter_location_enter:
+    - text: Please provide your location for better accuracy..
+  utter_details_link:
+    - text: Please click this link [iso code of indian states](http://india.code2care.org/india-states-iso-codes/) use letters after IN
+  utter_email:
+    - text: Please provide your email id
+  utter_mobile:
+    - text: Please provide your mobile number
+  utter_information:
+    - text: Thank You for providing your information, all the necessary updates and information will be sent to you via mail.
+
+
+
+
+
+actions:
+  - utter_greet
+  - utter_cheer_up
+  - utter_did_that_help
+  - utter_happy
+  - utter_goodbye
+  - utter_iamabot
+  - utter_covid
+  - utter_corona_intro
+  - utter_corona_symptoms
+  - utter_name
+  - utter_your_name
+  - action_total_cases
+  - action_total_cases_in_state
+  - action_email_sent
+  - utter_location_enter
+  - utter_details_link
+  - utter_email
+  - utter_mobile
+  - utter_information
+  - action_your_name
+

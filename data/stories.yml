@@ -9,6 +9,16 @@ stories:
   - intent: mood_great
   - action: utter_happy
 
+- story: corona_intro
+  steps:
+    - intent: corona_intro
+    - action: utter_corona_intro
+
+- story: covid
+  steps:
+    - intent: covid
+    - action: utter_covid
+
 - story: sad path 1
   steps:
   - intent: greet
@@ -28,3 +38,49 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
+
+- story: corona_symptoms
+  steps:
+    - intent: corona_symptoms
+    - action: utter_corona_symptoms
+    - action: utter_name
+    - intent: name
+    - action: action_your_name
+    #- action: utter_your_name
+
+
+- story: state_and_district_data
+  steps:
+    - intent: state
+    ##- action: action_total_cases
+    - action: utter_email
+
+    - intent: email
+    - action: utter_mobile
+    - action: utter_information
+    - intent: number
+    - action: utter_information
+    ##- action: action_email_sent
+
+- story: state_data
+  steps:
+    - intent: state
+    - action: action_total_cases_in_state
+    - action: utter_email
+
+    - intent: email
+    - action: utter_mobile
+
+    - intent: number
+    - action: utter_information
+    ##- action: action_email_sent
+
+
+- story: location_not_provided
+  steps:
+    - intent: get_location_cases
+    - action: utter_location_enter
+
+    - intent: no_idea
+    - action: utter_details_link
+    - action: utter_did_that_help
