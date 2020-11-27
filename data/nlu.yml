@@ -136,18 +136,18 @@ nlu:
 
 - intent: state
   examples: |
-    - im living in [maharashtra](user_state) and my district is [mumbai](user_district)
-    - im living in [gujarat](user_state) and my district is [ahmedabad](user_district)
-    - i live in [maharashtra](user_state)
-    - my district is [maharashtra](user_district)
+    - im living in [maharashtra](user_state) , my district is [mumbai](user_district) and iso code is [MH](iso_state)
+    - im living in [gujarat](user_state) and my district is [ahmedabad](user_district) and iso code is [GJ](iso_state)
+    - i live in [maharashtra](user_state) and iso code is [MH](iso_state)
+    - my district is [maharashtra](user_district) and iso code is [MH](iso_state)
 
 - intent: number_of_corona_cases
   examples: |
-    - number of cases in [maharashtra](user_state)
-    - number of cases in [gujarat](user_state)
-    - stats of cases in [maharashtra](user_state)
-    - stats of cases in [gujarat](user_state)
-    - total cases in [maharashtra](user_state)
+    - number of cases in [maharashtra](user_state) and iso code is [MH](iso_state)s
+    - number of cases in [gujarat](user_state) and iso code is [GJ](iso_state)
+    - stats of cases in [maharashtra](user_state) and iso code is [MH](iso_state)
+    - stats of cases in [gujarat](user_state) and iso code is [GJ](iso_state)
+    - total cases in [maharashtra](user_state) and iso code is [MH](iso_state)
 
 - intent: get_location_cases
   examples: |
@@ -168,3 +168,24 @@ nlu:
 - intent: number
   examples: |
     - my number is 11111111
+
+- intent: india_graph
+  examples: |
+    - show graphs
+    - graphs
+    - charts
+    - figures
+    - map
+    - india map
+    - cases in india
+    - images
+    - graph of cases
+
+- intent: world_map
+  examples: |
+    - show world graph
+    - world map
+    - cases in world
+    - world images
+    - graph of cases in the whole world
+

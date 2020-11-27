@@ -19,6 +19,8 @@ intents:
 - no_idea
 - email
 - number
+- india_graph
+- world_map
 
 entities:
 - NAME
@@ -68,7 +70,7 @@ responses:
   utter_name:
     - text: Hi!! May I know your name?
   utter_your_name:
-    - text: Hi {NAME} Do you want more about Corona Virus in Your Place!!example:--im living in statename and my district is !
+    - text: Hi {NAME} Do you want more about Corona Virus in Your Place!!example:--im living in statename, my district is and the ISO_code is !
   utter_location_enter:
     - text: Please provide your location for better accuracy..
   utter_details_link:
@@ -79,6 +81,10 @@ responses:
     - text: Please provide your mobile number
   utter_information:
     - text: Thank You for providing your information, all the necessary updates and information will be sent to you via mail.
+  utter_india_graph:
+    - text: To view country wise COVID-19 cases please visit this [website] (https://www.accuweather.com/en/in/national/covid-19)
+  utter_world_map:
+    - text: To view country wise COVID-19 cases please visit this [website] (https://coronavirus.jhu.edu/map.html)
 
 
 
@@ -96,13 +102,14 @@ actions:
   - utter_corona_symptoms
   - utter_name
   - utter_your_name
-  - action_total_cases
-  - action_total_cases_in_state
   - action_email_sent
   - utter_location_enter
   - utter_details_link
   - utter_email
   - utter_mobile
   - utter_information
+  - utter_india_graph
+  - utter_world_map
   - action_your_name
+  - action_total_cases_in_state
 

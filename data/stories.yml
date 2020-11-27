@@ -46,21 +46,8 @@ stories:
     - action: utter_name
     - intent: name
     - action: action_your_name
+    - action: utter_details_link
     #- action: utter_your_name
-
-
-- story: state_and_district_data
-  steps:
-    - intent: state
-    ##- action: action_total_cases
-    - action: utter_email
-
-    - intent: email
-    - action: utter_mobile
-    - action: utter_information
-    - intent: number
-    - action: utter_information
-    ##- action: action_email_sent
 
 - story: state_data
   steps:
@@ -83,4 +70,14 @@ stories:
 
     - intent: no_idea
     - action: utter_details_link
-    - action: utter_did_that_help
+    #- action: utter_did_that_help
+
+- story: india_graph
+  steps:
+    - intent: india_graph
+    - action: utter_india_graph
+
+- story: world_map
+  steps:
+    - intent: world_map
+    - action: utter_world_map
