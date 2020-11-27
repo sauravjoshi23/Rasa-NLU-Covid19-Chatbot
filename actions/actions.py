@@ -75,3 +75,26 @@ class ActionEmailSend(Action):
 
             dispatcher.utter_message(text=message)
             return []
+
+
+
+class ActionHelpline(Action):
+    def name(self) -> Text:
+        return "action_helpline"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+            slot_full_state=str(tracker.get_slot("user_state"))
+            slot_full_state=slot_full_state.capitalize()
+            dfs=pd.read_html("https://www.indiatvnews.com/coronavirus/helpline-numbers")
+            df=dfs[0]
+            df=df['State Helpline Numbers']
+            x=df.loc[lambda df: df['State/UT'] == slot_full_state]
+            for i in x.values:
+                ans=i[1]
+
+            message = "{} Helpline Number is {}".format(slot_full_state,ans)
+
+            dispatcher.utter_message(text=message)
+            return []

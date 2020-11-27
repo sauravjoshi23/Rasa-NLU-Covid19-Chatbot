@@ -22,6 +22,10 @@ intents:
 - want_email
 - india_graph
 - world_map
+- cases_distribution
+- video
+- helpline_number
+- something
 
 entities:
 - NAME
@@ -88,8 +92,12 @@ responses:
     - text: To view country wise COVID-19 cases please visit this [website] (https://www.accuweather.com/en/in/national/covid-19)
   utter_world_map:
     - text: To view country wise COVID-19 cases please visit this [website] (https://coronavirus.jhu.edu/map.html)
-
-
+  utter_cases_distribution:
+    - text: To view the current COVID-19 cases distribution please visit this [website] (https://www.worldometers.info/coronavirus/coronavirus-cases/)
+  utter_video:
+    - text: To view a helpful and an informative video please visit this [website] (https://youtu.be/DCdxsnRF1Fk)
+  utter_something:
+    - text: This is a Covid19 Chatbot.
 
 
 
@@ -113,7 +121,11 @@ actions:
   - utter_information
   - utter_india_graph
   - utter_world_map
+  - utter_cases_distribution
+  - utter_video
+  - utter_something
   - action_your_name
   - action_total_cases_in_state
   - action_email_send
+  - action_helpline
 

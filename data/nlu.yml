@@ -201,3 +201,45 @@ nlu:
     - world images
     - graph of cases in the whole world
 
+- intent: cases_distribution
+  examples: |
+    - show current COVID-19 cases distribution
+    - current COVID-19 cases distribution
+    - display current COVID-19 cases distribution
+    - cases distribution
+    - covid cases
+    - covid cases distribution
+    - covid19 cases distribution
+
+- intent: video
+  examples: |
+    - helpful video
+    - covid awareness video
+    - show some video
+    - display some video
+    - informative video
+    - useful video
+    - video
+
+- intent: helpline_number
+  examples: |
+    - helpline number for [maharashtra](user_state)
+    - number for [maharashtra](user_state)
+    - helpline number for [gujarat](user_state)
+    - number for [gujarat](user_state)
+
+- intent: something
+  examples: |
+    - how is the weather
+    - who won the match
+    - when is diwali
+    - what time is the exam
+    - which phone is better
+    - which year is this
+    - what day is today
+    - who are you
+    - what is this
+    - what kind of bot is this
+    - what does this bot do
+
+

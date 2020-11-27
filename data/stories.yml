@@ -82,3 +82,24 @@ stories:
   steps:
     - intent: world_map
     - action: utter_world_map
+
+- story: cases_distribution
+  steps:
+    - intent: cases_distribution
+    - action: utter_cases_distribution
+
+- story: video
+  steps:
+    - intent: video
+    - action: utter_video
+
+- story: helpline_number
+  steps:
+    - intent: helpline_number
+    - action: action_helpline
+
+- story: something
+  steps:
+    - intent: something
+    - action: utter_something
+
