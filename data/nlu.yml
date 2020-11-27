@@ -163,11 +163,23 @@ nlu:
 
 - intent: email
   examples: |
-    - my email is sauravjoshi2362000@gmail.com
+    - my email is [sauravjoshi2362000@gmail.com](email_id)
 
 - intent: number
   examples: |
-    - my number is 11111111
+    - my number is [11111111](mob_no)
+
+- intent: want_email
+  examples: |
+    - can i get an email regarding covid updates
+    - send me an email for covid updates
+    - send mail
+    - send email
+    - give me some information via mail
+    - send me information via mail
+    - covid updates via mail
+    - information via mail
+
 
 - intent: india_graph
   examples: |

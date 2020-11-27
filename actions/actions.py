@@ -6,6 +6,7 @@ import requests
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet,UserUtteranceReverted
+from actions import emailsend
 
 
 class NameAction(Action):
@@ -17,7 +18,7 @@ class NameAction(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
             slot_name=str(tracker.get_slot("NAME"))
 
-            message = "Hi {}  Do you want more about Corna Virus in Your Place!!example:--im leaving in statename, my district is.. and the ISO code is.. !".format(slot_name)
+            message = "Hi {}  Do you want more about Corna Virus in Your Place!!example:--Im living in statename, my district is.. and the ISO code is.. !".format(slot_name)
 
             dispatcher.utter_message(text=message)
             return []
@@ -57,3 +58,20 @@ class ActionState(Action):
 
         dispatcher.utter_message(text=message)
         return []
+
+
+class ActionEmailSend(Action):
+    def name(self) -> Text:
+        return "action_email_send"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+            slot_email=str(tracker.get_slot("email_id"))
+            print(slot_email)
+            emailsend.emailsend(slot_email)
+
+            message = "Email Has Been Sent to {} where we have provided all the necessary COVID updates and information.".format(slot_email)
+
+            dispatcher.utter_message(text=message)
+            return []

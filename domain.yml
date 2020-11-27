@@ -19,6 +19,7 @@ intents:
 - no_idea
 - email
 - number
+- want_email
 - india_graph
 - world_map
 
@@ -79,8 +80,10 @@ responses:
     - text: Please provide your email id
   utter_mobile:
     - text: Please provide your mobile number
+  utter_want_email:
+    - text: Email Has Been Sent to {email_id} where we have provided all the necessary COVID updates and information.
   utter_information:
-    - text: Thank You for providing your information, all the necessary updates and information will be sent to you via mail.
+    - text: Thank You for providing your information, all the necessary updates and information will be sent to you via mail if you want.
   utter_india_graph:
     - text: To view country wise COVID-19 cases please visit this [website] (https://www.accuweather.com/en/in/national/covid-19)
   utter_world_map:
@@ -102,14 +105,15 @@ actions:
   - utter_corona_symptoms
   - utter_name
   - utter_your_name
-  - action_email_sent
   - utter_location_enter
   - utter_details_link
   - utter_email
   - utter_mobile
+  - utter_want_email
   - utter_information
   - utter_india_graph
   - utter_world_map
   - action_your_name
   - action_total_cases_in_state
+  - action_email_send
 

@@ -60,7 +60,8 @@ stories:
 
     - intent: number
     - action: utter_information
-    ##- action: action_email_sent
+    - intent: want_email
+    - action: action_email_send
 
 
 - story: location_not_provided
