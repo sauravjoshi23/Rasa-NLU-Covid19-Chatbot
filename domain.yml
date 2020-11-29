@@ -26,7 +26,6 @@ intents:
 - video
 - helpline_number
 - something
-
 entities:
 - NAME
 - user_state
@@ -34,24 +33,25 @@ entities:
 - iso_state
 - email_id
 - mob_no
-
-
 slots:
   NAME:
     type: text
+    influence_conversation: true
   email_id:
     type: text
+    influence_conversation: true
   iso_state:
     type: text
+    influence_conversation: true
   mob_no:
     type: text
+    influence_conversation: true
   user_district:
     type: text
+    influence_conversation: true
   user_state:
     type: text
-
-
-
+    influence_conversation: true
 responses:
   utter_greet:
   - text: Hey! How are you?
@@ -67,65 +67,78 @@ responses:
   utter_iamabot:
   - text: I am a bot, powered by Rasa.
   utter_covid:
-    - text: COVID-19 is the infectious disease caused by the most recently discovered coronavirus. This new virus and disease were unknown before the outbreak began in Wuhan, China, in December 2019.
+  - text: COVID-19 is the infectious disease caused by the most recently discovered
+      coronavirus. This new virus and disease were unknown before the outbreak began
+      in Wuhan, China, in December 2019.
   utter_corona_intro:
-    - text: Corona viruses are a large family of viruses which may cause illness in animals or humans. In humans, several coronaviruses are known to cause respiratory infections ranging from the common cold to more severe diseases such as Middle East Respiratory Syndrome (MERS) and Severe Acute Respiratory Syndrome (SARS). The most recently discovered coronavirus causes coronavirus disease COVID-19.
+  - text: Corona viruses are a large family of viruses which may cause illness in
+      animals or humans. In humans, several coronaviruses are known to cause respiratory
+      infections ranging from the common cold to more severe diseases such as Middle
+      East Respiratory Syndrome (MERS) and Severe Acute Respiratory Syndrome (SARS).
+      The most recently discovered coronavirus causes coronavirus disease COVID-19.
   utter_corona_symptoms:
-    - text: The most common symptoms of COVID-19 are fever, tiredness, and dry cough. Some patients may have aches and pains, nasal congestion, runny nose, sore throat or diarrhea. These symptoms are usually mild and begin gradually.Some people become infected but don’t develop any symptoms and dont feel unwell.Most people (about 80%) recover from the disease without needing special treatment.Around 1 out of every 6 people who gets COVID-19 becomes seriously ill and develops difficulty breathing.
+  - text: The most common symptoms of COVID-19 are fever, tiredness, and dry cough.
+      Some patients may have aches and pains, nasal congestion, runny nose, sore throat
+      or diarrhea. These symptoms are usually mild and begin gradually.Some people
+      become infected but don’t develop any symptoms and dont feel unwell.Most people
+      (about 80%) recover from the disease without needing special treatment.Around
+      1 out of every 6 people who gets COVID-19 becomes seriously ill and develops
+      difficulty breathing.
   utter_name:
-    - text: Hi!! May I know your name?
+  - text: Hi!! May I know your name?
   utter_your_name:
-    - text: Hi {NAME} Do you want more about Corona Virus in Your Place!!example:--im living in statename, my district is and the ISO_code is !
+  - text: Hi {NAME} Do you want more about Corona Virus in Your Place!!example:--im
+      living in statename, my district is and the ISO_code is !
   utter_location_enter:
-    - text: Please provide your location for better accuracy..
+  - text: Please provide your location for better accuracy..
   utter_details_link:
-    - text: Please click this link [iso code of indian states](http://india.code2care.org/india-states-iso-codes/) use letters after IN
+  - text: Please click this link [iso code of indian states](http://india.code2care.org/india-states-iso-codes/)
+      use letters after IN
   utter_email:
-    - text: Please provide your email id
+  - text: Please provide your email id
   utter_mobile:
-    - text: Please provide your mobile number
+  - text: Please provide your mobile number
   utter_want_email:
-    - text: Email Has Been Sent to {email_id} where we have provided all the necessary COVID updates and information.
+  - text: Email Has Been Sent to {email_id} where we have provided all the necessary
+      COVID updates and information.
   utter_information:
-    - text: Thank You for providing your information, all the necessary updates and information will be sent to you via mail if you want.
+  - text: Thank You for providing your information, all the necessary updates and
+      information will be sent to you via mail if you want.
   utter_india_graph:
-    - text: To view country wise COVID-19 cases please visit this [website] (https://www.accuweather.com/en/in/national/covid-19)
+  - text: To view country wise COVID-19 cases please visit this [website] (https://www.accuweather.com/en/in/national/covid-19)
   utter_world_map:
-    - text: To view country wise COVID-19 cases please visit this [website] (https://coronavirus.jhu.edu/map.html)
+  - text: To view country wise COVID-19 cases please visit this [website] (https://coronavirus.jhu.edu/map.html)
   utter_cases_distribution:
-    - text: To view the current COVID-19 cases distribution please visit this [website] (https://www.worldometers.info/coronavirus/coronavirus-cases/)
+  - text: To view the current COVID-19 cases distribution please visit this [website]
+      (https://www.worldometers.info/coronavirus/coronavirus-cases/)
   utter_video:
-    - text: To view a helpful and an informative video please visit this [website] (https://youtu.be/DCdxsnRF1Fk)
+  - text: To view a helpful and an informative video please visit this [website] (https://youtu.be/DCdxsnRF1Fk)
   utter_something:
-    - text: This is a Covid19 Chatbot.
-
-
-
+  - text: This is a Covid19 Chatbot.
 actions:
-  - utter_greet
-  - utter_cheer_up
-  - utter_did_that_help
-  - utter_happy
-  - utter_goodbye
-  - utter_iamabot
-  - utter_covid
-  - utter_corona_intro
-  - utter_corona_symptoms
-  - utter_name
-  - utter_your_name
-  - utter_location_enter
-  - utter_details_link
-  - utter_email
-  - utter_mobile
-  - utter_want_email
-  - utter_information
-  - utter_india_graph
-  - utter_world_map
-  - utter_cases_distribution
-  - utter_video
-  - utter_something
-  - action_your_name
-  - action_total_cases_in_state
-  - action_email_send
-  - action_helpline
-
+- utter_greet
+- utter_cheer_up
+- utter_did_that_help
+- utter_happy
+- utter_goodbye
+- utter_iamabot
+- utter_covid
+- utter_corona_intro
+- utter_corona_symptoms
+- utter_name
+- utter_your_name
+- utter_location_enter
+- utter_details_link
+- utter_email
+- utter_mobile
+- utter_want_email
+- utter_information
+- utter_india_graph
+- utter_world_map
+- utter_cases_distribution
+- utter_video
+- utter_something
+- action_your_name
+- action_total_cases_in_state
+- action_email_send
+- action_helpline
